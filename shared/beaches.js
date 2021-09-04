@@ -8,7 +8,7 @@ export const BEACHES = [
         citationLink: "https://www.best-of-oahu.com/waimea-bay.html",
         alt: "Waimea Bay",
         // image: "../components/images/waimea-bay.jpg"
-        // image: 'beach.jpg'
+        // ./images/waimea-bay.jpg'
     },
     {
         id: 1,
