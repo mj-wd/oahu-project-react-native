@@ -3,7 +3,7 @@ export const BEACHES = [
         id: 0,
         category: "Beach",
         name: "Waimea Bay",
-        description: "The towering North Shore waves start here in Waimea Bay.  The winter swells that roll into the famous Oahu North Shore beaches, generally top out at Waimea Beach Park , on the right hand side of the bay. Surfing the Bay, along with Sunset Beach and the Banzai Pipeline, is considered almost a pilgrimage among many pro-surfers that fly in from all around the world to partake in the daring action. The fun generally begins when the National Weather Service issues high surf warnings for the North Shore.  Waimea Beach Park is located just past Haleiwa Beach, and across from Waimea Falls Park",
+        description: "The towering North Shore waves start here in Waimea Bay. The winter swells that roll into the famous Oahu North Shore beaches, generally top out at Waimea Beach Park , on the right hand side of the bay. Surfing the Bay, along with Sunset Beach and the Banzai Pipeline, is considered almost a pilgrimage among many pro-surfers that fly in from all around the world to partake in the daring action. The fun generally begins when the National Weather Service issues high surf warnings for the North Shore. Waimea Beach Park is located just past Haleiwa Beach, and across from Waimea Falls Park",
         source: "best-of-oahu.com",
         citationLink: "https://www.best-of-oahu.com/waimea-bay.html",
         alt: "Waimea Bay",
