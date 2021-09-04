@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, FlatList } from 'react-native';
-import { Card, Image } from 'react-native-elements';
+import { Card } from 'react-native-elements';
 
 function Directory(props) {
 
@@ -8,11 +8,13 @@ function Directory(props) {
         return (
             <Card>
                 <Card.Title>{item.name}</Card.Title>
-                <Text>{item.description}</Text>            
-                <Image
-                    resizeMode="cover"            
-                    source={{ uri: item.image }}          
+                {/* IMAGE DOESN'T WORK!!!!!!!!!!!!!!!!!! */}
+                <Card.Image
+                    source={{ uri: item.image }}
+                    style={{ width: 400, height: 200 }}
+                    resizeMode="cover"                      
                 />
+                <Text>{item.description}</Text>
             </Card>
         );
     };
