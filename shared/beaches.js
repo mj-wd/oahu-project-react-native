@@ -7,7 +7,9 @@ export const BEACHES = [
         source: "best-of-oahu.com",
         citationLink: "https://www.best-of-oahu.com/waimea-bay.html",
         alt: "Waimea Bay",
-        // image: '../components/images/react-lake.jpg'
+        // image: '../components/images/beach.jpg'
+        image: './images/beach.jpg'
+
     },
     {
         id: 1,
@@ -17,7 +19,9 @@ export const BEACHES = [
         source: "hawaii-guide.com",
         citationLink: "https://www.hawaii-guide.com/oahu/beaches",
         alt: "Lanikai Beach",
-        // image: '../components/images/react-lake.jpg'
+        // image: '../components/images/beach.jpg'
+        image: './images/beach.jpg'
+
     },
     {
         id: 2,
@@ -27,6 +31,7 @@ export const BEACHES = [
         source: "hawaii.com",
         citationLink: "https://www.hawaii.com/oahu/beaches/top-5-beaches/g",
         alt: "Sunset Beach",
-        // image: '../components/images/react-lake.jpg'
+        // image: '../components/images/beach.jpg'
+        image: './images/beach.jpg'
     }, 
 ];
