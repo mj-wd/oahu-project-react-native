@@ -8,7 +8,7 @@ function Directory(props) {
         return (
             <Card
                 featuredTitle={item.name}
-                image={item.image}
+                image={require('./images/beach.jpg')}
             >
                 <Text>{item.description}</Text>
             </Card>
