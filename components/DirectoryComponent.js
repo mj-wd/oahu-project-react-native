@@ -1,16 +1,19 @@
 import React from 'react';
-import { FlatList } from 'react-native';
-import { ListItem } from 'react-native-elements';
+import { Text, FlatList } from 'react-native';
+import { Card, Image } from 'react-native-elements';
 
 function Directory(props) {
 
     const renderDirectoryItem = ({item}) => {
         return (
-            <ListItem
-                title={item.name}
-                subtitle={item.description}
-                leftAvatar={{ source: require('./images/beach.jpg')}}
-            />
+            <Card>
+                <Card.Title>{item.name}</Card.Title>
+                <Text>{item.description}</Text>            
+                <Image
+                    resizeMode="cover"            
+                    source={{ uri: item.image }}          
+                />
+            </Card>
         );
     };
 
