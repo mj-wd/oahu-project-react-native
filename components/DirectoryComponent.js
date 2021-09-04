@@ -6,14 +6,10 @@ function Directory(props) {
 
     const renderDirectoryItem = ({item}) => {
         return (
-            <Card>
-                <Card.Title>{item.name}</Card.Title>
-                {/* IMAGE DOESN'T WORK!!!!!!!!!!!!!!!!!! */}
-                <Card.Image
-                    source={{ uri: item.image }}
-                    style={{ width: 400, height: 200 }}
-                    resizeMode="cover"                      
-                />
+            <Card
+                featuredTitle={item.name}
+                image={item.image}
+            >
                 <Text>{item.description}</Text>
             </Card>
         );
