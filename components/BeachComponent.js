@@ -3,7 +3,7 @@ import { Text, FlatList } from 'react-native';
 import { Card } from 'react-native-elements';
 
 
-function Beach(props) {
+function Beaches(props) {
 
     const renderBeachItem = ({item}) => {
         return (
@@ -26,4 +26,4 @@ function Beach(props) {
     );
 }
 
-export default Beach;
+export default Beaches;

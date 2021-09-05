@@ -1,16 +1,21 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
-import Beach from './BeachComponent';
+import Beaches from './BeachComponent';
+import Restaurants from './RestaurantsComponent';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer } from 'react-navigation';
 
 const AttractionComponents = createStackNavigator(
     {
-        Beach: { screen: Beach },
-    }, 
+        Beaches: { screen: Beaches },
+        Restaurants: { screen: Restaurants },
+    },
+    {
+        initialRouteName: 'Beaches',
+    }
 );
 
-const StackNavigator  = createAppContainer(AttractionComponents);
+const StackNavigator = createAppContainer(AttractionComponents);
 
 class Attractions extends Component {
     render() {
