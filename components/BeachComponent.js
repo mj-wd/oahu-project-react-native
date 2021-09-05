@@ -2,9 +2,10 @@ import React from 'react';
 import { Text, FlatList } from 'react-native';
 import { Card } from 'react-native-elements';
 
+
 function Beach(props) {
 
-    const renderDirectoryItem = ({item}) => {
+    const renderBeachItem = ({item}) => {
         return (
             <Card
                 featuredTitle={item.name}
@@ -19,7 +20,7 @@ function Beach(props) {
     return (
         <FlatList
             data={props.beaches}
-            renderItem={renderDirectoryItem}
+            renderItem={renderBeachItem}
             keyExtractor={item => item.id.toString()}
         />
     );

@@ -3,7 +3,6 @@ import { View } from 'react-native';
 import { createAppContainer } from 'react-navigation';
 // see https://reactnavigation.org/docs/4.x/bottom-tab-navigator
 import { createBottomTabNavigator } from 'react-navigation-tabs';
-import { createStackNavigator } from 'react-navigation-stack';
 import Home from './HomeComponent';
 import AboutUs from './AboutUsComponent';
 import Attractions from './AttractionsComponent';
@@ -25,10 +24,6 @@ const AboutUsNavigator = createBottomTabNavigator(
         AboutUs: { screen: AboutUs }
     },
 );
-
-const AttractionsStack = createStackNavigator({
-    Attractions: Attractions,
-});
 
 const MainNavigator = createBottomTabNavigator(
     {
