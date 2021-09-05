@@ -2,7 +2,7 @@ import React from 'react';
 import { Text, FlatList } from 'react-native';
 import { Card } from 'react-native-elements';
 
-function Directory(props) {
+function Beach(props) {
 
     const renderDirectoryItem = ({item}) => {
         return (
@@ -25,4 +25,4 @@ function Directory(props) {
     );
 }
 
-export default Directory;
+export default Beach;

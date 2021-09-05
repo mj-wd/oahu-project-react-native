@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
-import Directory from './DirectoryComponent';
-import { BEACHES } from '../shared/beaches';
+import { View, Text } from 'react-native';
+import { Header } from 'react-native-elements';
+import Home from './HomeComponent';
 
 class Main extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            beaches: BEACHES
-        };
-    }
-
     render() {
-        return <Directory beaches={this.state.beaches} />;
+        return (            
+            <View>
+                <Header>
+                    <Text>Welcome to Oahu</Text>
+                </Header>
+                <Home />
+            </View>
+        );
     }
 }
 
