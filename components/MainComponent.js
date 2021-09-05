@@ -5,6 +5,7 @@ import { createAppContainer } from 'react-navigation';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 import Home from './HomeComponent';
 import AboutUs from './AboutUsComponent';
+import Attractions from './AttractionsComponent';
 
 const HomeNavigator = createBottomTabNavigator(
     {
@@ -18,10 +19,17 @@ const AboutUsNavigator = createBottomTabNavigator(
     },
 );
 
+const AttractionsNavigator = createBottomTabNavigator(
+    {
+        Attractions: { screen: Attractions }
+    },
+);
+
 const MainNavigator = createBottomTabNavigator(
     {
         Home: { screen: HomeNavigator },
         AboutUs: { screen: AboutUsNavigator },
+        Attractions: { screen: AttractionsNavigator },
     },
 );
 
@@ -30,10 +38,7 @@ const TabNavigator = createAppContainer(MainNavigator)
 class Main extends Component {
     render() {
         return (
-            <View style={{
-                flex: 1,
-                // paddingTop: Platform.OS === 'ios' ? 0 : Constants.statusBarHeight
-            }}>
+            <View style={{ flex: 1 }}>
                 <TabNavigator />
             </View>
         );
