@@ -15,22 +15,12 @@ function Beaches(props) {
                 >
                     <Text>{item.description}</Text>
                 </Card>
-                <Button
-                    title="Restaurants"
-                    onPress={() => this.props.navigation.navigate('Restaurants')}
+                <Button title="Go to Restaurants"
+                onPress={() => this.props.navigation.navigate('Restaurants')}
                 />
-                <Button
-                    title="Shopping"
-                    onPress={() => this.props.navigation.navigate('Shopping')}
-                />
-                <Button
-                    title="Siteseeing"
-                    onPress={() => this.props.navigation.navigate('Siteseeing')}
-                />
-                <Button
-                    title="Traditions"
-                    onPress={() => this.props.navigation.navigate('Traditions')}
-                />
+                <Button title="Back to Menu"
+                onPress={() => this.props.navigation.navigate('AttractionsLanding')}
+                />            
             </View>
         );
     };

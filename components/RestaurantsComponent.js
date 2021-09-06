@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { View, Text, Button } from 'react-native';
+import { View, ScrollView, Image, Button } from 'react-native';
+import { Card } from 'react-native-elements';
 
 class Restaurants extends Component {
     
@@ -10,25 +11,35 @@ class Restaurants extends Component {
     render() {
         return (
             <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-                <Text>
-                    Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants                     Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants                       Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants                       Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants                       Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants                       Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants                       Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants                       Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants                       Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants                       Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants                       Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants                       Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants                       Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants                       Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants Restaurants                 
-                </Text>
-                {/* <Button
-                    title="Beaches"
-                    onPress={() => this.props.navigation.navigate('Beaches')}
-                /> */}
-                <Button
-                    title="Siteseeing"
-                    onPress={() => this.props.navigation.navigate('Siteseeing')}
-                />
-                <Button
-                    title="Traditions"
-                    onPress={() => this.props.navigation.navigate('Traditions')}
-                />
-                <Button
-                    title="Shopping"
-                    onPress={() => this.props.navigation.navigate('Shopping')}
-                />
+                <ScrollView>
+                    <Card>
+                        <Card.Title>A Pig and the Lady</Card.Title>
+                        <Image
+                            source={ require('./images/pig-and-the-lady.jpg') }
+                            style={{ width: 250, height: 250 }}
+                    />
+                    </Card>
+                    <Card>
+                        <Card.Title>Helena's Hawaiian BBQ</Card.Title>
+                        <Image
+                            source={ require('./images/helenas.jpg') }
+                            style={{ width: 250, height: 250 }}
+                    />
+                    </Card>
+                    <Card>
+                        <Card.Title>Ricado's Italian</Card.Title>
+                        <Image
+                            source={ require('./images/ricados.jpg') }
+                            style={{ width: 250, height: 250 }}
+                    />
+                    </Card>
+                    <Button title="Go to Shopping"
+                    onPress={() => this.props.navigation.navigate('Shopping')} 
+                    />
+                    <Button title="Back to Menu"
+                    onPress={() => this.props.navigation.navigate('AttractionsLanding')}
+                    />
+                </ScrollView>   
             </View>
         );
     }

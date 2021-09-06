@@ -13,22 +13,9 @@ class Traditions extends Component {
                 <Text>
                     Traditions Traditions Traditions Traditions Traditions Traditions Traditions Traditions Traditions Traditions Traditions Traditions Traditions Traditions Traditions Traditions Traditions Traditions Traditions Traditions Traditions Traditions Traditions Traditions Traditions Traditions Traditions Traditions Traditions Traditions Traditions Traditions Traditions Traditions Traditions Traditions           
                 </Text>
-                {/* <Button
-                    title="Beaches"
-                    onPress={() => this.props.navigation.navigate('Beaches')}
-                /> */}
-                <Button
-                    title="Restaurants"
-                    onPress={() => this.props.navigation.navigate('Restaurants')}
-                />
-                <Button
-                    title="Shopping"
-                    onPress={() => this.props.navigation.navigate('Traditions')}
-                />
-                <Button
-                    title="Siteseeing"
-                    onPress={() => this.props.navigation.navigate('Siteseeing')}
-                />
+                <Button title="Back to Menu"
+                onPress={() => this.props.navigation.navigate('AttractionsLanding')}
+                />              
             </View>
         );
     }

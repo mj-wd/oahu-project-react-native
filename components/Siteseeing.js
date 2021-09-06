@@ -13,22 +13,12 @@ class Siteseeing extends Component {
                 <Text>
                     Siteseeing Siteseeing Siteseeing Siteseeing Siteseeing Siteseeing Siteseeing Siteseeing Siteseeing Siteseeing Siteseeing Siteseeing Siteseeing Siteseeing Siteseeing Siteseeing Siteseeing Siteseeing Siteseeing Siteseeing Siteseeing Siteseeing Siteseeing Siteseeing Siteseeing Siteseeing Siteseeing Siteseeing Siteseeing Siteseeing                 
                 </Text>
-                {/* <Button
-                    title="Beaches"
-                    onPress={() => this.props.navigation.navigate('Beaches')}
-                /> */}
-                <Button
-                    title="Restaurants"
-                    onPress={() => this.props.navigation.navigate('Restaurants')}
+                <Button title="Go to Traditions"
+                onPress={() => this.props.navigation.navigate('Traditions')}
                 />
-                <Button
-                    title="Shopping"
-                    onPress={() => this.props.navigation.navigate('Shopping')}
-                />
-                <Button
-                    title="Traditions"
-                    onPress={() => this.props.navigation.navigate('Traditions')}
-                />
+                <Button title="Back to Menu"
+                onPress={() => this.props.navigation.navigate('AttractionsLanding')}
+                />         
             </View>
         );
     }
