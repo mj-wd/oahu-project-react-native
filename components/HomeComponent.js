@@ -9,7 +9,7 @@ class Home extends Component {
 
     render() {
         return (
-            <View>
+            <View style={{ flex: 1, alignItems: 'left', justifyContent: 'center' }}>
                 <Text>
                     Aloha! Welcome to The Hawaii Bros' Official Oah'u Vacation Planner.                    
                 </Text>
