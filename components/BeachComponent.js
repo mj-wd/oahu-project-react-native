@@ -6,6 +6,7 @@ function Beaches(props) {
 
     const renderBeachItem = ({item}) => {
         return (
+            //ListItem to make dynamic images work???
             <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
                 <Card
                     featuredTitle={item.name}
