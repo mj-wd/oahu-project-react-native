@@ -6,7 +6,7 @@ import { createAppContainer } from 'react-navigation';
 
 //Beaches component is bummed out; it won't work with the stack navigator. IDK why
 import AttractionsLanding from './AttractionsLandingComponent';
-// import Beaches from './BeachComponent';
+import Beaches from './BeachComponent';
 import Restaurants from './RestaurantsComponent';
 import Shopping from './ShoppingComponent';
 import Siteseeing from './Siteseeing';
@@ -14,7 +14,7 @@ import Traditions from './TraditionsComponent';
 
 const StackNavigator = createStackNavigator({
     AttractionsLanding: { screen: AttractionsLanding },
-    // Beaches: { screen: Beaches },
+    Beaches: { screen: Beaches },
     Restaurants: { screen: Restaurants },
     Shopping: { screen: Shopping },
     Siteseeing: { screen: Siteseeing },

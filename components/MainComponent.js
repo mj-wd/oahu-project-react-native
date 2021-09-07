@@ -18,12 +18,14 @@ const HomeNavigator = createBottomTabNavigator(
 const AttractionsNavigator = createBottomTabNavigator(
     {
         Attractions: { screen: Attractions }
+        //add button to go back to main 
     },
 );
 
 const AboutUsNavigator = createBottomTabNavigator(
     {
         AboutUs: { screen: AboutUs }
+        //About instead of AboutUs on screen
     },
 );
 

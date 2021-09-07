@@ -1,3 +1,5 @@
+//by Fredo
+
 import React, { Component } from 'react';
 import { View, Text, Button } from 'react-native';
 
@@ -13,9 +15,9 @@ class AttractionsLanding extends Component {
                 <Text>
                  ******Turn Buttons into Something Graphically Significant for Each Attraction Page---maybe using tiles?*****
                 </Text>
-                {/* <Button title="Go to Beaches"
+                <Button title="Go to Beaches"
                 onPress={() => this.props.navigation.navigate('Beaches')} 
-                /> */}
+                />
                 <Button title="Go to Restaurants"
                 onPress={() => this.props.navigation.navigate('Restaurants')}
                 />       
