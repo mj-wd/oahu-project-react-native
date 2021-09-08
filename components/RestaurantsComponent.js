@@ -19,16 +19,16 @@ class Restaurants extends Component {
         headerTitleStyle: {
             color: '#fff'
         }
-    }
+    };
                     
     constructor() { 
         super(); 
         this.objArr = RESTAURANTS
-    }
+    };
  
     showArrayItem = (item) => { 
         Alert.alert(item); 
-    }
+    };
  
     render() { 
         return (            
@@ -69,8 +69,8 @@ class Restaurants extends Component {
                 }
             </ScrollView>
         );
-    }
-}
+    };
+};
  
 const styles = StyleSheet.create({
  
