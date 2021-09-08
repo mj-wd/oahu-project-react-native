@@ -6,7 +6,15 @@ import { View, Text, Button } from 'react-native';
 class AttractionsLanding extends Component {
     
     static navigationOptions = {
-        title: 'The Best of Oauhu'
+        title: 'The Best of Oauhu',
+        headerStyle :{
+            backgroundColor: '#4EACB8',
+            height: 100
+        },
+        headerTintColor: '#fff',
+        headerTitleStyle: {
+            color: '#fff'
+        }
     }
 
     render() {

@@ -1,15 +1,24 @@
 import React, { Component } from 'react'; 
-import { StyleSheet, Text, Image, View, Alert, ScrollView, Platform, TouchableOpacity } from 'react-native';
-import { Card, ListItem } from 'react-native-elements';
+import { Button, Pressable, StyleSheet, Text, Image, View, Alert, ScrollView, Platform, TouchableOpacity } from 'react-native';
+import { Card, Icon } from 'react-native-elements';
+import Constants from 'expo-constants';
+import { createStackNavigator } from 'react-navigation';
 
 import { RESTAURANTS } from '../shared/restaurants';
- 
+
+//color scheme: https://www.schemecolor.com/hawaiian-island.php
 class Restaurants extends Component {
  
     static navigationOptions = {
-        title: 'Restaurants'
-    }
-                
+        headerStyle :{
+            backgroundColor: '#4EACB8',
+            height: 100
+        },
+        headerTintColor: '#fff',
+        headerTitleStyle: {
+            color: '#fff'
+        }
+    }                
     constructor() { 
         super(); 
         this.objArr = RESTAURANTS
@@ -21,23 +30,43 @@ class Restaurants extends Component {
  
     render() { 
         return (
+            
             <ScrollView style={styles.MainContainer}>
-                
                 {
                     this.objArr.map((item, key) => (        
                         <TouchableOpacity key={key} onPress={this.showArrayItem.bind(this, item.name)}>
-                            <Card 
+                            <Card
                                 featuredTitle={item.name}
-                                // image={{ uri: item.image }}
-                                image={{ uri: './images/ricados.jpg'}}                                
-                            >
+                                // image={item.image}
+                                image={require('./images/ricados.jpg')}                
+                            >       
                                 <Text style={styles.TextStyle}>{item.description}</Text> 
                                 <Text style={styles.TextStyle}>Source: {item.source}</Text> 
-                                <View style={{ width: '100%', height: 1, backgroundColor: '#000' }} />
+                                <View style={{ width: '100%', height: 1, backgroundColor: '#000' }} /> 
                             </Card>
                         </TouchableOpacity> 
                     ))
-                } 
+                }
+                <View style={{ flexDirection: 'row', flex:1, margin: 10 }}>
+                <Icon
+                    flex={3} 
+                    onPress={() => this.props.navigation.navigate('AttractionsLanding')}
+                    name='bars'
+                    type='font-awesome'
+                    color='#f50'
+                    raised
+                    reverse
+                />
+                <Icon
+                    flex={3}
+                    onPress={() => this.props.navigation.navigate('Shopping')}
+                    name='shopping-cart'
+                    type='font-awesome'
+                    color='#f50'
+                    raised
+                    reverse
+                />
+                </View>
             </ScrollView>
         );
     }
@@ -47,17 +76,15 @@ const styles = StyleSheet.create({
  
   MainContainer: {
     flex: 1,
-    margin: 2,
-    paddingTop: (Platform.OS) === 'ios' ? 20 : 0,
- 
-  },
- 
+    margin: 0,
+    paddingTop: Platform.OS === 'ios' ? 0 : Constants.statusBarHeight,
+    backgroundColor: '#07607B'
+  }, 
   TextStyle: {
     fontSize: 16,
     color: '#000',
     textAlign: 'left'
-  }
- 
+  },
 });
 
 export default Restaurants;
