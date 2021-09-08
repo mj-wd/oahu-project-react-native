@@ -8,8 +8,9 @@ class AttractionsLanding extends Component {
     static navigationOptions = {
         title: 'The Best of Oauhu',
         headerStyle :{
-            backgroundColor: '#4EACB8',
-            height: 100
+            backgroundColor: '#07607B',
+            height: 90,
+            paddingTop: 45
         },
         headerTintColor: '#fff',
         headerTitleStyle: {

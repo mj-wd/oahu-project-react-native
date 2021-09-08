@@ -1,8 +1,7 @@
 import React, { Component } from 'react'; 
-import { Button, Pressable, StyleSheet, Text, Image, View, Alert, ScrollView, Platform, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, Alert, ScrollView, Platform, TouchableOpacity } from 'react-native';
 import { Card, Icon } from 'react-native-elements';
 import Constants from 'expo-constants';
-import { createStackNavigator } from 'react-navigation';
 
 import { RESTAURANTS } from '../shared/restaurants';
 
@@ -10,15 +9,18 @@ import { RESTAURANTS } from '../shared/restaurants';
 class Restaurants extends Component {
  
     static navigationOptions = {
+        title: 'Restaurants',
         headerStyle :{
-            backgroundColor: '#4EACB8',
-            height: 100
+            backgroundColor: '#07607B',
+            height: 90,
+            paddingTop: 45
         },
         headerTintColor: '#fff',
         headerTitleStyle: {
             color: '#fff'
         }
-    }                
+    }
+                    
     constructor() { 
         super(); 
         this.objArr = RESTAURANTS
@@ -29,9 +31,27 @@ class Restaurants extends Component {
     }
  
     render() { 
-        return (
-            
+        return (            
             <ScrollView style={styles.MainContainer}>
+                <View style={{ flexDirection: 'row', flex: 1 }}>
+                    <Icon
+                        onPress={() => this.props.navigation.navigate('AttractionsLanding')}
+                        name='bars'
+                        type='font-awesome'
+                        color='#f50'
+                        raised
+                        reverse
+                    />
+                    <Icon
+                        alignSelf='flex-end'
+                        onPress={() => this.props.navigation.navigate('Shopping')}
+                        name='shopping-cart'
+                        type='font-awesome'
+                        color='#f50'
+                        raised
+                        reverse
+                    />
+                </View>
                 {
                     this.objArr.map((item, key) => (        
                         <TouchableOpacity key={key} onPress={this.showArrayItem.bind(this, item.name)}>
@@ -47,26 +67,6 @@ class Restaurants extends Component {
                         </TouchableOpacity> 
                     ))
                 }
-                <View style={{ flexDirection: 'row', flex:1, margin: 10 }}>
-                <Icon
-                    flex={3} 
-                    onPress={() => this.props.navigation.navigate('AttractionsLanding')}
-                    name='bars'
-                    type='font-awesome'
-                    color='#f50'
-                    raised
-                    reverse
-                />
-                <Icon
-                    flex={3}
-                    onPress={() => this.props.navigation.navigate('Shopping')}
-                    name='shopping-cart'
-                    type='font-awesome'
-                    color='#f50'
-                    raised
-                    reverse
-                />
-                </View>
             </ScrollView>
         );
     }
@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
     flex: 1,
     margin: 0,
     paddingTop: Platform.OS === 'ios' ? 0 : Constants.statusBarHeight,
-    backgroundColor: '#07607B'
+    backgroundColor: '#4EACB8'
   }, 
   TextStyle: {
     fontSize: 16,
