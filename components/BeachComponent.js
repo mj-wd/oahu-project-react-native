@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Text, FlatList } from 'react-native';
-import { Card } from 'react-native-elements';
+import { Card, ListItem } from 'react-native-elements';
 
 function Beaches(props) {
 
@@ -10,12 +10,14 @@ function Beaches(props) {
         return (
             //ListItem to make dynamic images work???
             <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-                <Card
-                    featuredTitle={item.name}
-                    image={require('./images/waimea-bay.jpg')}
-                    // image={require(item.image)}
-                >
-                    <Text>{item.description}</Text>
+                <Card>
+                    <ListItem 
+                        featuredTitle={item.name}
+                        style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}
+                        subtitle={item.description}
+                        // image={require(item.image)}
+                    />
+                    {/* <Text>{item.description}</Text> */}
                 </Card>
                 <Button title="Go to Restaurants"
                 onPress={() => this.props.navigation.navigate('Restaurants')}

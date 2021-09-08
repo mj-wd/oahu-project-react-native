@@ -1,48 +1,63 @@
-import React, { Component } from 'react';
-import { View, ScrollView, Image, Button } from 'react-native';
-import { Card } from 'react-native-elements';
+import React, { Component } from 'react'; 
+import { StyleSheet, Text, Image, View, Alert, ScrollView, Platform, TouchableOpacity } from 'react-native';
+import { Card, ListItem } from 'react-native-elements';
 
+import { RESTAURANTS } from '../shared/restaurants';
+ 
 class Restaurants extends Component {
-    
+ 
     static navigationOptions = {
         title: 'Restaurants'
     }
-
-    render() {
+                
+    constructor() { 
+        super(); 
+        this.objArr = RESTAURANTS
+    }
+ 
+    showArrayItem = (item) => { 
+        Alert.alert(item); 
+    }
+ 
+    render() { 
         return (
-            <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-                <ScrollView>
-                    <Card>
-                        <Card.Title>A Pig and the Lady</Card.Title>
-                        <Image
-                            source={ require('./images/pig-and-the-lady.jpg') }
-                            style={{ width: 250, height: 250 }}
-                    />
-                    </Card>
-                    <Card>
-                        <Card.Title>Helena's Hawaiian BBQ</Card.Title>
-                        <Image
-                            source={ require('./images/helenas.jpg') }
-                            style={{ width: 250, height: 250 }}
-                    />
-                    </Card>
-                    <Card>
-                        <Card.Title>Ricado's Italian</Card.Title>
-                        <Image
-                            source={ require('./images/ricados.jpg') }
-                            style={{ width: 250, height: 250 }}
-                    />
-                    </Card>
-                    <Button title="Go to Shopping"
-                    onPress={() => this.props.navigation.navigate('Shopping')} 
-                    />
-                    <Button title="Back to Menu"
-                    onPress={() => this.props.navigation.navigate('AttractionsLanding')}
-                    />
-                </ScrollView>   
-            </View>
+            <ScrollView style={styles.MainContainer}>
+                
+                {
+                    this.objArr.map((item, key) => (        
+                        <TouchableOpacity key={key} onPress={this.showArrayItem.bind(this, item.name)}>
+                            <Card 
+                                featuredTitle={item.name}
+                                // image={{ uri: item.image }}
+                                image={{ uri: './images/ricados.jpg'}}                                
+                            >
+                                <Text style={styles.TextStyle}>{item.description}</Text> 
+                                <Text style={styles.TextStyle}>Source: {item.source}</Text> 
+                                <View style={{ width: '100%', height: 1, backgroundColor: '#000' }} />
+                            </Card>
+                        </TouchableOpacity> 
+                    ))
+                } 
+            </ScrollView>
         );
     }
 }
+ 
+const styles = StyleSheet.create({
+ 
+  MainContainer: {
+    flex: 1,
+    margin: 2,
+    paddingTop: (Platform.OS) === 'ios' ? 20 : 0,
+ 
+  },
+ 
+  TextStyle: {
+    fontSize: 16,
+    color: '#000',
+    textAlign: 'left'
+  }
+ 
+});
 
 export default Restaurants;
