@@ -1,8 +1,9 @@
 import React, { Component } from 'react'; 
-import { StyleSheet, Text, View, Alert, ScrollView, TouchableOpacity, Linking  } from 'react-native';
+import { StyleSheet, Text, View, Image, ImageBackground, Alert, ScrollView, TouchableOpacity, Linking  } from 'react-native';
 import { Card, Icon } from 'react-native-elements';
 
 import { BEACHES } from '../shared/beaches';
+import { baseUrl } from '../shared/baseUrl';
 
 //color scheme: https://www.schemecolor.com/hawaiian-island.php
 class Beaches extends Component {
@@ -19,7 +20,7 @@ class Beaches extends Component {
             color: '#fff',
             textShadowRadius: 5,
             textShadowColor: '#000'
-        }
+        },
     };
                     
     constructor() { 
@@ -59,10 +60,11 @@ class Beaches extends Component {
                             <Card 
                                 containerStyle={styles.InfoCard}
                                 featuredTitle={item.name}
-                                // image={item.image}
-                                image={require('./images/waimea-bay.jpg')}                
-                            >       
-                                <Text>{item.description}</Text> 
+                                image={{ uri: baseUrl + item.photo }}
+                                // image={require('./images/waimea-bay.jpg')}                
+                            >   
+                                {/* <Image source={item.photo}/>    */}
+                                <Text>{item.description}</Text>
                                 <Text style={styles.SourceStyle}>{"\n"}Source: {item.source}</Text> 
                                 <View style={{ width: '100%', height: 1, backgroundColor: '#000' }} /> 
                             </Card>
