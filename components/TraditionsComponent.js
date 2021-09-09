@@ -39,7 +39,7 @@ class Traditions extends Component {
                         onPress={() => this.props.navigation.navigate('AttractionsLanding')}
                         name='bars'
                         type='font-awesome'
-                        color='#f50'
+                        color='#d24375'
                         raised
                         reverse
                     />
