@@ -61,9 +61,7 @@ class Beaches extends Component {
                                 containerStyle={styles.InfoCard}
                                 featuredTitle={item.name}
                                 image={{ uri: baseUrl + item.photo }}
-                                // image={require('./images/waimea-bay.jpg')}                
                             >   
-                                {/* <Image source={item.photo}/>    */}
                                 <Text>{item.description}</Text>
                                 <Text style={styles.SourceStyle}>{"\n"}Source: {item.source}</Text> 
                                 <View style={{ width: '100%', height: 1, backgroundColor: '#000' }} /> 

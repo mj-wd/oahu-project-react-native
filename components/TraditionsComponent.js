@@ -50,8 +50,7 @@ class Traditions extends Component {
                             <Card 
                                 containerStyle={styles.InfoCard}
                                 featuredTitle={item.name}
-                                // image={item.image}
-                                image={require('./images/luau.jpg')}                
+                                image={{ uri: baseUrl + item.photo }}
                             >       
                                 <Text>{item.description}</Text> 
                                 <Text style={styles.SourceStyle}>{"\n"}Source: {item.source}</Text> 
