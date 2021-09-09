@@ -19,5 +19,5 @@ export const SHOPPING = [
         source: "10best.com",
         citationLink: "https://www.10best.com/destinations/hawaii/honolulu/shopping/best-shopping/",        
         photo: "/assets/images/pearlridge.jpg"
-    }, 
+    }
 ];

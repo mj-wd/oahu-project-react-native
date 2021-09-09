@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, Alert, ScrollView, TouchableOpacity, Linking  }
 import { Card, Icon } from 'react-native-elements';
 
 import { RESTAURANTS } from '../shared/restaurants';
+import { baseUrl } from '../shared/baseUrl';
 
 //color scheme: https://www.schemecolor.com/hawaiian-island.php
 class Restaurants extends Component {

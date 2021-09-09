@@ -19,5 +19,5 @@ export const RESTAURANTS = [
       source: "timeout.com & thepigandthelady.com",
       citationLink: "https://thepigandthelady.com/",        
       photo: "/assets/images/pig-and-the-lady.jpg"
-  }, 
-  ];
+  }
+];

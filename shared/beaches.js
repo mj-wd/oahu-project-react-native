@@ -19,5 +19,5 @@ export const BEACHES = [
         source: "hawaii.com",
         citationLink: "https://www.hawaii.com/oahu/beaches/top-5-beaches/",
         photo: "/assets/images/sunset-beach.jpg"
-    }, 
+    }
 ];
