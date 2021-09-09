@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, View, Alert, ScrollView, TouchableOpacity, Linking  } from 'react-native';
 import { Card, Icon } from 'react-native-elements';
 
-import { TRADITIONS } from '../shared/traditions';
+import { BEACHES } from '../shared/beaches';
 
 //color scheme: https://www.schemecolor.com/hawaiian-island.php
-class Traditions extends Component {
+class Beaches extends Component {
  
     static navigationOptions = {
-        title: 'Best Traditions',
+        title: 'Best Beaches',
         headerStyle :{
             backgroundColor: '#07607B',
             height: 90,
@@ -24,7 +24,7 @@ class Traditions extends Component {
                     
     constructor() { 
         super(); 
-        this.objArr = TRADITIONS
+        this.objArr = BEACHES
     };
  
     showArrayItem = (item) => { 
@@ -43,6 +43,15 @@ class Traditions extends Component {
                         raised
                         reverse
                     />
+                    <Icon
+                        alignSelf='flex-end'
+                        onPress={() => this.props.navigation.navigate('Restaurants')}
+                        name='cutlery'
+                        type='font-awesome'
+                        color='#f50'
+                        raised
+                        reverse
+                    />
                 </View>
                 {
                     this.objArr.map((item, key) => (        
@@ -51,7 +60,7 @@ class Traditions extends Component {
                                 containerStyle={styles.InfoCard}
                                 featuredTitle={item.name}
                                 // image={item.image}
-                                image={require('./images/luau.jpg')}                
+                                image={require('./images/waimea-bay.jpg')}                
                             >       
                                 <Text>{item.description}</Text> 
                                 <Text style={styles.SourceStyle}>{"\n"}Source: {item.source}</Text> 
@@ -80,4 +89,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Traditions;
+export default Beaches;

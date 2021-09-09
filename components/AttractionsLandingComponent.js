@@ -33,8 +33,8 @@ class AttractionsLanding extends Component {
                 <Button title="Go to Shopping"
                 onPress={() => this.props.navigation.navigate('Shopping')} 
                 />
-                <Button title="Go to Siteseeing"
-                onPress={() => this.props.navigation.navigate('Siteseeing')}
+                <Button title="Go to Sightseeing"
+                onPress={() => this.props.navigation.navigate('Sightseeing')}
                 />
                 <Button title="Go to Traditions"
                 onPress={() => this.props.navigation.navigate('Traditions')}
