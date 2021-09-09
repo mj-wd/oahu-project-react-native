@@ -39,7 +39,7 @@ class Shopping extends Component {
                         onPress={() => this.props.navigation.navigate('AttractionsLanding')}
                         name='bars'
                         type='font-awesome'
-                        color='#f50'
+                        color='#d24375'
                         raised
                         reverse
                     />
@@ -48,7 +48,7 @@ class Shopping extends Component {
                         onPress={() => this.props.navigation.navigate('Sightseeing')}
                         name='binoculars'
                         type='font-awesome'
-                        color='#f50'
+                        color='#d24375'
                         raised
                         reverse
                     />
