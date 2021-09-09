@@ -1,32 +1,85 @@
 //by Zach
-
+//Work in progress with the styling
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Image, StyleSheet } from 'react-native';
+
+
 
 class Home extends Component {
 
     static navigationOptions = {
-        title: 'Home'
+        title: 'Home',
+        tabBarVisible: false
+        //tabBarVisible gets rid of the extra tab on top saying which tab we are currently in.
+        //Just a design idea.
     }
 
     render() {
         return (
-            <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-                <Text>
-                    Aloha! Welcome to The Hawaii Bros' Official Oah'u Vacation Planner.                    
-                </Text>
-                <Text>
-                    Do you want to maximize the fun factor on your next visit to this majestical island? Well, bruh, you've come to the right place!
-                </Text>
-                <Text>
-                    Other sites bombard you with so many things to do that'll it make your head spin. We want you to just chill, relax, and have no worries. So we've picked the absolute top three things from each of the most popular categories. Trust us, one of us lives here.                    
-                </Text>
-                <Text>
-                    Go ahead and surf the links above or click on the pic below for our #1s if you only have like one weekend or something for your visit.                    
-                </Text>
+            <View style={styles.container}>
+                <View style={styles.textbox1}>
+                    <Text style={styles.text1}>
+                        Aloha! Welcome to The Hawaii Bros' Official Oah'u Vacation Planner.
+                    </Text>
+                </View>
+                <View style={styles.imagebox}>
+                    <Image source={require('./images/heroimageoahu.jpg')} style={styles.image} />
+                </View>
+                <View style={styles.textbox2}>
+                    <Text style={styles.text2}>
+                        Click on the Attractions tab below to get started!
+                    </Text>
+                </View>
             </View>
+
         );
     }
 }
+
+const styles = StyleSheet.create({
+    container: {
+        backgroundColor: '#4EACB8',
+        flex: 1,
+        flexDirection: "column",
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: 0
+    },
+    text1: {
+        fontSize: 22,
+        fontWeight: 'bold',
+        textAlign: 'center'
+    },
+    text2: {
+        fontSize: 17,
+        fontWeight: 'bold',
+        textAlign: 'center'
+    },
+    textbox1: {
+        flex: 2,
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+    textbox2: {
+        flex: 2,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    imagebox: {
+        flex: 3,
+        alignItems: 'center',
+        justifyContent: 'center',
+
+    },
+    image: {
+        width: 350,
+        height: 350,
+        borderRadius: 175,
+        borderColor: "white",
+        borderWidth: 3,
+
+    },
+
+});
 
 export default Home;

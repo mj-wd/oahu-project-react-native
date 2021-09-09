@@ -6,7 +6,7 @@ import { View, Text, Button } from 'react-native';
 class AttractionsLanding extends Component {
     
     static navigationOptions = {
-        title: 'The Best of Oauhu',
+        title: 'The Best of Oahu',
         headerStyle :{
             backgroundColor: '#07607B',
             height: 90,
