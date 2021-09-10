@@ -1,3 +1,4 @@
+//by Zach
 import React, { Component } from 'react';
 import { View } from 'react-native';
 
@@ -6,7 +7,8 @@ import { createAppContainer } from 'react-navigation';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 
 import Home from './HomeComponent';
-import AboutUs from './AboutUsComponent';
+import About from './AboutComponent';
+import Map from './MapComponent';
 import Attractions from './AttractionsComponent';
 
 const HomeNavigator = createBottomTabNavigator(
@@ -22,10 +24,15 @@ const AttractionsNavigator = createBottomTabNavigator(
     },
 );
 
-const AboutUsNavigator = createBottomTabNavigator(
+const MapNavigator = createBottomTabNavigator(
     {
-        AboutUs: { screen: AboutUs }
-        //About instead of AboutUs on screen
+        Map: { screen: Map }
+    },
+);
+
+const AboutNavigator = createBottomTabNavigator(
+    {
+        About: { screen: About }
     },
 );
 
@@ -33,7 +40,8 @@ const MainNavigator = createBottomTabNavigator(
     {
         Home: { screen: HomeNavigator },
         Attractions: { screen: AttractionsNavigator },
-        AboutUs: { screen: AboutUsNavigator }
+        Map: { screen: MapNavigator },
+        About: { screen: AboutNavigator }
     },
 );
 

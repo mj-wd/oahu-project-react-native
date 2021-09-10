@@ -1,3 +1,4 @@
+//by Mark
 import React, { Component } from 'react'; 
 import { StyleSheet, Text, View, Image, ImageBackground, Alert, ScrollView, TouchableOpacity, Linking  } from 'react-native';
 import { Card, Icon } from 'react-native-elements';

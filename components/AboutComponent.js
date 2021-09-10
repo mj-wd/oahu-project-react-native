@@ -1,14 +1,14 @@
 //by Zach
-
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 
 //This component is to be like our React footer component plus I thought it would be nice to add about us, the developers and a bit about the project too.
 
-class AboutUs extends Component {
+class About extends Component {
 
     static navigationOptions = {
-        title: 'About Us & This App'
+        title: 'About Us & This App',
+        tabBarVisible: false
     }
 
     render() {
@@ -40,4 +40,4 @@ class AboutUs extends Component {
     }
 }
 
-export default AboutUs;
+export default About;
