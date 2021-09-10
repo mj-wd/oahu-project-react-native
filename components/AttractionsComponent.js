@@ -25,6 +25,10 @@ const StackNavigator = createStackNavigator({
 const AttractionsNavigator = createAppContainer(StackNavigator);
 
 class Attractions extends Component {
+
+    static navigationOptions = {
+        tabBarVisible: false
+    }
     render() {
         return (
             <View style={{ flex: 1 }}>

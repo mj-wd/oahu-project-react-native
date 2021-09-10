@@ -15,9 +15,6 @@ class About extends Component {
         return (
             <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
                 <Text>
-                    Fun Facts: Oʻahu's nickname is the Gathering Place and is the the most populous of Hawaii's islands.
-                </Text>
-                <Text>
                     Mark                    
                 </Text>
                 <Text>
