@@ -20,7 +20,7 @@ const HomeNavigator = createBottomTabNavigator(
 const AttractionsNavigator = createBottomTabNavigator(
     {
         Attractions: { screen: Attractions }
-        //add button to go back to main 
+        //add button to go back to TabNav 
     },
 );
 
@@ -36,7 +36,7 @@ const AboutNavigator = createBottomTabNavigator(
     },
 );
 
-const MainNavigator = createBottomTabNavigator(
+const TabNavNavigator = createBottomTabNavigator(
     {
         Home: { screen: HomeNavigator },
         Attractions: { screen: AttractionsNavigator },
@@ -45,9 +45,9 @@ const MainNavigator = createBottomTabNavigator(
     },
 );
 
-const TabNavigator = createAppContainer(MainNavigator)
+const TabNavigator = createAppContainer(TabNavNavigator)
 
-class Main extends Component {
+class TabNav extends Component {
     render() {
         return (
             <View style={{ flex: 1 }}>
@@ -57,4 +57,4 @@ class Main extends Component {
     }
 }
 
-export default Main;
+export default TabNav;
