@@ -1,53 +1,43 @@
 //by Mark
-import React, { Component } from 'react';
-import { View, Text, Image, StyleSheet } from 'react-native';
+import * as React from 'react';
+import { StyleSheet, View, Dimensions } from 'react-native';
+import MapView from 'react-native-maps';
 
-class Map extends Component {
+// export default Class MapMarkers extends React.Component {
+//     state = {
+//         coordinates: [
+//             {name: 'ricados', latitude: '', longitude: ''}
+//         ]
+//     }
 
-    static navigationOptions = {
-        title: 'Map',
-        tabBarVisible: false
-    }
+// };
 
-    render() {
-        return ( 
-            <View style={styles.Container}>
-                <View style={styles.TextBox1}>
-                    <Text style={styles.Text1}>
-                        Will contain a Google Map with pins for the attractions. Please pardon me during the renovation.
-                    </Text>
-                </View>
-                <View style={styles.ImageBox}>
-                    <Image source={require('../assets/images/men-at-work.jpg')} style={styles.Image} />
-                </View>
-            </View>
-        );
-    }
-}
+export default function Map() {
+  return (
+    <View style={styles.Container}>
+      <MapView style={styles.Map} 
+        region={{
+            latitude: 21.48295403007236,
+            longitude: -157.9608539034392,    
+            latitudeDelta: 1.2,
+            longitudeDelta: 0.6
+        }}
+      />
+    </View>
+  );
+};
 
 const styles = StyleSheet.create({
     Container: {
-        backgroundColor: '#4EACB8',
-        flex: 1,
-        justifyContent: 'center',
-        padding: 0
+      flex: 1,
+      backgroundColor: '#fff',
+      alignItems: 'center',
+      justifyContent: 'center',
     },
-    Text1: {
-        fontSize: 22,
-        fontWeight: 'bold',
-        textAlign: 'center'
+    Map: {
+      width: Dimensions.get('window').width,
+      height: Dimensions.get('window').height,
     },
-    TextBox1: {
-        justifyContent: 'center'
-    },
-    ImageBox: {
-        backgroundColor: '#4EACB8',
-        alignSelf: 'center'
-    },
-    Image: {
-        width: 350,
-        height: 350,
-    },
-});
+  });
 
-export default Map;
+// export default Map;
