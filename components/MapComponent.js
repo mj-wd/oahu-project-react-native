@@ -1,5 +1,4 @@
-//by Zach
-//Work in progress with the styling
+//by Mark
 import React, { Component } from 'react';
 import { View, Text, Image, StyleSheet } from 'react-native';
 
