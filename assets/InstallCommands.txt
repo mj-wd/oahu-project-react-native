@@ -1,0 +1,24 @@
+yarn global add expo-cli@4
+
+yarn add expo@41
+
+expo install react@16.13.1 react-dom@16.13.1 react-native@https://github.com/expo/react-native/archive/sdk-41.0.0.tar.gz
+
+expo install react-native-elements@2.2.1
+
+expo install react-navigation@4
+
+expo install react-native-gesture-handler react-native-reanimated@2.1.0 react-native-screens react-native-safe-area-context @react-native-community/masked-view react-navigation-stack@^1.10.3
+
+expo install expo-constants
+
+yarn global add json-server
+
+expo install redux@4.0.5 react-redux@7.2.0 redux-thunk@2.3.0 redux-logger@3.0.6
+
+yarn add react-native-maps --save-exact
+
+yarn add pod-install
+
+
+
