@@ -1,7 +1,7 @@
 //by Zach
 //WIP I still need to add responsive icons and need to add the onPress with links going to our seperate pages
 import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, ScrollView } from 'react-native';
 import { Icon } from 'react-native-elements';
 
 //This component is to be like our React footer component plus I thought it would be nice to add about us, the developers and a bit about the project too.
@@ -15,6 +15,7 @@ class About extends Component {
 
     render() {
         return (
+
             <View style={styles.container}>
                 <Text style={styles.title} >
                     Links To The Bros!
