@@ -16,7 +16,7 @@ yarn global add json-server
 
 expo install redux@4.0.5 react-redux@7.2.0 redux-thunk@2.3.0 redux-logger@3.0.6
 
-yarn add react-native-maps --save-exact
+yarn add react-native-maps@0.27.1
 
 yarn add pod-install
 
