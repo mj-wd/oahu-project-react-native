@@ -7,7 +7,7 @@ export const SHOPPING = [
         photo: "/assets/images/aloha-swap-meet.jpg"
     },
     {
-        name: "Ala Moana",
+        name: "Ala Moana Center",
         description: "Ala Moana Center offers an open-air shopping experience in Honolulu, with hundreds of shops and dining opportunities accompanied by a variety of entertainment choices. Premier retail outlets and a great selection of restaurants are only some of the reasons to visit this shopping center. The fresh air, highlights of Hawaiian art, and scattered palm trees make it a relaxing environment to walk about on a leisurely day. You can come and find the right swimwear and surf gear while enjoying the refreshing Hawaiian breeze at Ala Moana Center. Best of all, the shopping center is just opposite Ala Moana Beach and Regional Park.",
         source: "hotels.com",
         citationLink: "https://www.hotels.com/go/usa/us-best-shopping-oahu",

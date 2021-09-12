@@ -2,10 +2,11 @@
 import React, { Component } from 'react';
 import { StyleSheet, Dimensions, Text } from 'react-native';
 import { Icon } from 'react-native-elements';
+
 import MapView, { Callout, Marker } from 'react-native-maps';
 
 import { MAPMARKERS } from '../shared/mapmarkers';
-import Geolocation from '@react-native-community/geolocation';
+import { baseUrl } from '../shared/baseUrl'; 
 
 class Map extends Component {
 
@@ -44,12 +45,20 @@ class Map extends Component {
                   name={item.icon}
                   type='font-awesome'
                   color={item.iconColor}
-                  size={10}
+                  size={11}
                   raised
                   reverse
                 />
                 <Callout style={styles.Callout}>
-                  <Text style={{ fontSize: 15 }}>{item.name}</Text>
+                  <Text style={{ fontSize: 15 }}>
+                    {item.name}
+                  </Text>
+                  <Text style={{ fontSize: 12 }}>
+                    latitude: {item.latitude}
+                  </Text>
+                  <Text style={{ fontSize: 12 }}>
+                    longitude: {item.longitude}
+                  </Text>
                 </Callout>
               </Marker> 
             ))
@@ -71,11 +80,13 @@ const styles = StyleSheet.create({
       height: Dimensions.get('window').height,
     },
     Callout: {
-      width: 75,
+      position: 'absolute', 
+      minWidth: 200, 
+      minHeight: 100,
       backgroundColor: '#fff',
       alignItems: 'center',
       justifyContent: 'center',
-    },
+    }
   });
 
 export default Map;
