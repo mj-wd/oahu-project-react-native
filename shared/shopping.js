@@ -14,7 +14,7 @@ export const SHOPPING = [
         photo: "/assets/images/ala-moana.jpg"
     },
     {
-        name: "Pearlridge",
+        name: "Pearlridge Center",
         description: "Marked by the stately Aloha Tower, this harbor side shopping complex provides a glimpse of old Hawaii, complete with docked ships and crowds of tourists. The array of shops offers great souvenir options and all sorts of gift ideas. Representative items include candles, jewelry, clothing, Pacific crafts, fragrances, sunglasses, cigars, and island art. Onsite restaurants include Chai's Island Bistro, Gordon Biersch Brewery, and Don Ho's Island Grill. Make sure to visit the tower's observation deck while you're there. Although it's centrally located in Honolulu, the location offers a bit of an escape from the busy streets of Waikiki and the hustle and bustle of larger shopping centers.",
         source: "10best.com",
         citationLink: "https://www.10best.com/destinations/hawaii/honolulu/shopping/best-shopping/",        

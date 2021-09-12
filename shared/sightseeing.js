@@ -19,5 +19,5 @@ export const SIGHTSEEING = [
         source: "gohawaii.com",
         citationLink: "https://www.gohawaii.com/islands/oahu/regions/central-oahu/pearl-harbor",        
         photo: "/assets/images/PearlHarbor.jpg"
-    }, 
+    }
 ];
