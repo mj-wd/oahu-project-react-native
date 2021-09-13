@@ -6,7 +6,7 @@ import { Icon } from 'react-native-elements';
 
 //This component is to be like our React footer component plus I thought it would be nice to add about us, the developers and a bit about the project too.
 
-// Mark's Bio (feel free to edit as you see fit, image uploaded here and in JSON server): Mark was born in Boston, and has lived in Seattle and Los Angeles. He currently resides near Mexico City with his fiance. He enjoys his motorcycle, reading, and striving to never eat the same meal twice. In his past lives he was a chef, a bartender, and a construction project engineer. He is now working towards a career in web development.
+// Mark's Bio (feel free to edit as you see fit, image uploaded here and in JSON server): Mark was born in Boston, and has lived in Seattle and Los Angeles. He currently resides near Mexico City with his fiance. He enjoys his motorcycle, reading, and striving to never eat the same meal twice. In his past lives he was a chef, a bartender, and a construction project engineer. He is now working towards a career in web development. linkedin.com/in/mark-jeffery
 
 class About extends Component {
 
