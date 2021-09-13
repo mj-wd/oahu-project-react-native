@@ -6,7 +6,6 @@ import { Icon } from 'react-native-elements';
 import MapView, { Callout, Marker } from 'react-native-maps';
 
 import { MAPMARKERS } from '../shared/mapmarkers';
-import { baseUrl } from '../shared/baseUrl'; 
 
 class Map extends Component {
 
