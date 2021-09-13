@@ -5,7 +5,6 @@ import { View } from 'react-native';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer } from 'react-navigation';
 
-//Beaches component is bummed out; it won't work with the stack navigator. IDK why
 import AttractionsLanding from './AttractionsLandingComponent';
 import Beaches from './BeachesComponent';
 import Restaurants from './RestaurantsComponent';

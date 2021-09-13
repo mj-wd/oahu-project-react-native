@@ -5,7 +5,6 @@ export const MAPMARKERS = [
         longitude: -158.0633,
         icon: "sun-o",
         iconColor: "#FC9601",
-        photo: "/assets/images/waimea-bay.jpg"
     },
     {
         name: "Lanikai Beach",
@@ -13,7 +12,6 @@ export const MAPMARKERS = [
         longitude: -157.7151,
         icon: "sun-o",
         iconColor: "#FC9601",
-        photo: "/assets/images/lanikai-beach.jpg"
     },
     {
         name: "Sunset Beach",
@@ -21,7 +19,6 @@ export const MAPMARKERS = [
         longitude: -158.0402,
         icon: "sun-o",
         iconColor: "#FC9601",
-        photo: "/assets/images/sunset-beach.jpg"
     },
     { 
         name: "Ricados Italian Restaurant",
