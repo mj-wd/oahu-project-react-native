@@ -46,6 +46,20 @@ class Fredo extends Component {
                     reverse
                 />
                 <Icon
+                    name="github"
+                    type="font-awesome"
+                    color="#333"
+                    onPress={() => { Linking.openURL('https://github.com/fredodotdesign')}}
+                    reverse
+                />
+                <Icon
+                    name="dribbble"
+                    type="font-awesome"
+                    color="#F082AC"
+                    onPress={() => { Linking.openURL('https://dribbble.com/fredoalvarez')}}
+                    reverse
+                />
+                <Icon
                     name="mouse-pointer"
                     type="font-awesome"
                     color="#E62117"
