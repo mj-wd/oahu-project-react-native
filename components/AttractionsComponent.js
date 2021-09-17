@@ -12,6 +12,7 @@ import Shopping from './ShoppingComponent';
 import Sightseeing from './SightseeingComponent';
 import Traditions from './TraditionsComponent';
 
+
 const StackNavigator = createStackNavigator({
     AttractionsLanding: { screen: AttractionsLanding },
     Beaches: { screen: Beaches },
@@ -19,6 +20,7 @@ const StackNavigator = createStackNavigator({
     Shopping: { screen: Shopping },
     Sightseeing: { screen: Sightseeing },
     Traditions: { screen: Traditions },
+
 });
 
 const AttractionsNavigator = createAppContainer(StackNavigator);
