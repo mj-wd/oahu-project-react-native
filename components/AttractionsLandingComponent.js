@@ -1,46 +1,119 @@
 //by Fredo
 import React, { Component } from 'react';
-import { View, Text, Button } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
+import { Card, Button } from 'react-native-elements';
+import { LinearGradient } from 'expo-linear-gradient';
 
 class AttractionsLanding extends Component {
     
     static navigationOptions = {
-        title: 'The Best of Oahu',
-        headerStyle :{
-            backgroundColor: '#07607B',
-            height: 90,
-            paddingTop: 45
-        },
-        headerTintColor: '#fff',
-        headerTitleStyle: {
-            color: '#fff'
-        }
+        // title: 'The Best of Oahu',
+        tabBarVisible: false
+        // headerStyle :{
+        //     backgroundColor: '#07607B',
+        //     height: 90,
+        //     paddingTop: 45
+        // },
+        // headerTintColor: '#fff',
+        // headerTitleStyle: {
+        //     color: '#fff'
+        // }
     }
 
     render() {
         return (
-            <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-                <Text>
-                 ******Turn Buttons into Something Graphically Significant for Each Attraction Page---maybe using tiles?*****
+            <View style={styles.container}>
+                <Text style={styles.title}>
+                    Featured Attractions
                 </Text>
-                <Button title="Go to Beaches"
-                onPress={() => this.props.navigation.navigate('Beaches')} 
-                />
-                <Button title="Go to Restaurants"
-                onPress={() => this.props.navigation.navigate('Restaurants')}
-                />       
-                <Button title="Go to Shopping"
-                onPress={() => this.props.navigation.navigate('Shopping')} 
-                />
-                <Button title="Go to Sightseeing"
-                onPress={() => this.props.navigation.navigate('Sightseeing')}
-                />
-                <Button title="Go to Traditions"
-                onPress={() => this.props.navigation.navigate('Traditions')}
-                />
+                <Card containerStyle={styles.tile}>
+                    <Text style={styles.subtitle}>
+                        Beaches
+                    </Text>
+                    <Button title="Go"
+                        raised={true}
+                        onPress={() => this.props.navigation.navigate('Beaches')}
+                        ViewComponent={LinearGradient}
+                        linearGradientProps={{colors: ['#07607B', '#4EACB8']}}
+                    />
+                </Card>
+                <Card containerStyle={styles.tile}>
+                    <Text style={styles.subtitle}>
+                        Restaurants
+                    </Text>
+                    <Button title="Go"
+                        raised={true}
+                        onPress={() => this.props.navigation.navigate('Restaurants')}
+                        ViewComponent={LinearGradient}
+                        linearGradientProps={{colors: ['#07607B', '#4EACB8']}}
+                    />
+                </Card>
+                <Card containerStyle={styles.tile}>
+                    <Text style={styles.subtitle}>
+                        Shopping
+                    </Text>
+                    <Button title="Go"
+                        raised={true}
+                        onPress={() => this.props.navigation.navigate('Shopping')}
+                        ViewComponent={LinearGradient}
+                        linearGradientProps={{colors: ['#07607B', '#4EACB8']}}
+                    />
+                </Card>
+                <Card containerStyle={styles.tile}>
+                    <Text style={styles.subtitle}>
+                        Sightseeing
+                    </Text>
+                    <Button title="Go"
+                        raised={true}
+                        onPress={() => this.props.navigation.navigate('Sightseeing')}
+                        ViewComponent={LinearGradient}
+                        linearGradientProps={{colors: ['#07607B', '#4EACB8']}}
+                    />
+                </Card>
+                <Card containerStyle={styles.tile}>
+                    <Text style={styles.subtitle}>
+                        Traditions
+                    </Text>
+                    <Button title="Go"
+                        raised={true}
+                        onPress={() => this.props.navigation.navigate('Traditions')}
+                        ViewComponent={LinearGradient}
+                        linearGradientProps={{colors: ['#07607B', '#4EACB8']}}
+                    />
+                </Card>
             </View>
         );
     }
 }
+
+const styles = StyleSheet.create({
+
+    container: {
+        backgroundColor: '#4EACB8',
+        flex: 1,
+    },
+    title: {
+        marginTop: 10,
+        fontSize: 40,
+        fontWeight: 'bold',
+        textAlign: 'center'
+    },
+    subtitle: {
+        fontSize: 20,
+        fontWeight: 'bold',
+    },
+    tile: {
+        height: 100,
+        backgroundColor: '#fff',
+        borderColor: '#ededed',
+        borderRadius: 5,
+        borderWidth: 1,
+        padding: 20,
+        display: 'flex',
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+    },
+
+});
 
 export default AttractionsLanding;
