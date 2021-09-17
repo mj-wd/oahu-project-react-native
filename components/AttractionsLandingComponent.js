@@ -1,7 +1,7 @@
 //by Fredo
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, ImageBackground, TouchableHighlight } from 'react-native';
-import { Card, Button, ListItem } from 'react-native-elements';
+import { Card,  } from 'react-native-elements';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Assets } from 'react-navigation-stack';
 
