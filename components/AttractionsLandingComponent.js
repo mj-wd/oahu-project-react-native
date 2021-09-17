@@ -1,8 +1,9 @@
 //by Fredo
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, ImageBackground } from 'react-native';
-import { Card, Button } from 'react-native-elements';
+import { View, Text, StyleSheet, ImageBackground, TouchableHighlight } from 'react-native';
+import { Card, Button, ListItem } from 'react-native-elements';
 import { LinearGradient } from 'expo-linear-gradient';
+import { Assets } from 'react-navigation-stack';
 
 class AttractionsLanding extends Component {
     
@@ -26,47 +27,61 @@ class AttractionsLanding extends Component {
                 <Text style={styles.title}>
                     Featured Attractions
                 </Text>
-                <Card containerStyle={styles.tile}>
-                    <Button 
-                        title="Beaches"
-                        raised={true}
-                        onPress={() => this.props.navigation.navigate('Beaches')}
-                        ViewComponent={LinearGradient}
-                        linearGradientProps={{colors: ['#07607B', '#4EACB8']}}
-                    />
-                </Card>
-                <Card containerStyle={styles.tile}>
-                    <Button title="Restaurants"
-                        raised={true}
-                        onPress={() => this.props.navigation.navigate('Restaurants')}
-                        ViewComponent={LinearGradient}
-                        linearGradientProps={{colors: ['#07607B', '#4EACB8']}}
-                    />
-                </Card>
-                <Card containerStyle={styles.tile}>
-                    <Button title="Shopping"
-                        raised={true}
-                        onPress={() => this.props.navigation.navigate('Shopping')}
-                        ViewComponent={LinearGradient}
-                        linearGradientProps={{colors: ['#07607B', '#4EACB8']}}
-                    />
-                </Card>
-                <Card containerStyle={styles.tile}>
-                    <Button title="Sightseeing"
-                        raised={true}
-                        onPress={() => this.props.navigation.navigate('Sightseeing')}
-                        ViewComponent={LinearGradient}
-                        linearGradientProps={{colors: ['#07607B', '#4EACB8']}}
-                    />
-                </Card>
-                <Card containerStyle={styles.tile}>
-                    <Button title="Traditions"
-                        raised={true}
-                        onPress={() => this.props.navigation.navigate('Traditions')}
-                        ViewComponent={LinearGradient}
-                        linearGradientProps={{colors: ['#07607B', '#4EACB8']}}
-                    />
-                </Card>
+                <TouchableHighlight
+                    onPress={() => this.props.navigation.navigate('Beaches')}
+                    activeOpacity='0'
+                    underlayColor
+                >
+                    <Card containerStyle={styles.tile}>
+                        <Text>
+                            Beaches
+                        </Text>
+                    </Card>
+                </TouchableHighlight>
+                <TouchableHighlight
+                    onPress={() => this.props.navigation.navigate('Restaurants')}
+                    activeOpacity='0'
+                    underlayColor
+                >
+                    <Card containerStyle={styles.tile}>
+                        <Text>
+                            Restaurants
+                        </Text>
+                    </Card>
+                </TouchableHighlight>
+                <TouchableHighlight
+                    onPress={() => this.props.navigation.navigate('Shopping')}
+                    activeOpacity='0'
+                    underlayColor
+                >
+                    <Card containerStyle={styles.tile}>
+                        <Text>
+                            Shopping
+                        </Text>
+                    </Card>
+                </TouchableHighlight>
+                <TouchableHighlight
+                    onPress={() => this.props.navigation.navigate('Sightseeing')}
+                    activeOpacity='0'
+                    underlayColor
+                >
+                    <Card containerStyle={styles.tile}>
+                        <Text>
+                            Sightseeing
+                        </Text>
+                    </Card>
+                </TouchableHighlight>
+                <TouchableHighlight
+                    onPress={() => this.props.navigation.navigate('Traditions')}
+                    activeOpacity='0'
+                    underlayColor
+                >
+                    <Card containerStyle={styles.tile}>
+                        <Text>
+                            Traditions
+                        </Text>
+                    </Card>
+                </TouchableHighlight>
             </View>
         );
     }
