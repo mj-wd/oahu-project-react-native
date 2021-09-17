@@ -7,17 +7,17 @@ import { Card, Avatar } from 'react-native-elements';
 class AttractionsLanding extends Component {
     
     static navigationOptions = {
-        // title: 'The Best of Oahu',
-        tabBarVisible: false
-        // headerStyle :{
-        //     backgroundColor: '#07607B',
-        //     height: 90,
-        //     paddingTop: 45
-        // },
-        // headerTintColor: '#fff',
-        // headerTitleStyle: {
-        //     color: '#fff'
-        // }
+        title: 'The Best of Oahu',
+        // tabBarVisible: false,
+        headerStyle :{
+            backgroundColor: '#07607B',
+            height: 90,
+            paddingTop: 45
+        },
+        headerTintColor: '#07607B',
+        headerTitleStyle: {
+            color: '#fff'
+        }
     }
 
     render() {
@@ -33,7 +33,7 @@ class AttractionsLanding extends Component {
                 >
                     <Card containerStyle={styles.tile}>
                         <Text style={styles.subtitle}>
-                        <Avatar rounded size='large' source={require('../assets/images/beach.jpg')} />
+                        <Avatar rounded style={styles.thumb} size='medium' source={require('../assets/images/beach.jpg')} />
                             Beaches
                         </Text>
                     </Card>
@@ -45,7 +45,7 @@ class AttractionsLanding extends Component {
                 >
                     <Card containerStyle={styles.tile}>
                         <Text style={styles.subtitle}>
-                        <Avatar rounded  size='large' source={require('../assets/images/ricados.jpg')} />
+                        <Avatar rounded  size='medium' source={require('../assets/images/ricados.jpg')} />
                             Restaurants
                         </Text>
                     </Card>
@@ -57,7 +57,7 @@ class AttractionsLanding extends Component {
                 >
                     <Card containerStyle={styles.tile}>
                         <Text style={styles.subtitle}>
-                        <Avatar rounded size='large' source={require('../assets/images/alamoana.jpg')} />
+                        <Avatar rounded size='medium' source={require('../assets/images/alamoana.jpg')} />
                             Shopping
                         </Text>
                     </Card>
@@ -69,7 +69,7 @@ class AttractionsLanding extends Component {
                 >
                     <Card containerStyle={styles.tile}>
                         <Text style={styles.subtitle}>
-                        <Avatar rounded size='large' source={require('../assets/images/pearl-harbor.jpg')} />
+                        <Avatar rounded size='medium' source={require('../assets/images/pearl-harbor.jpg')} />
                             Sightseeing
                         </Text>
                     </Card>
@@ -81,7 +81,7 @@ class AttractionsLanding extends Component {
                 >
                     <Card containerStyle={styles.tile}>
                         <Text style={styles.subtitle}>
-                        <Avatar rounded size='large' source={require('../assets/images/luau.jpg')} />
+                        <Avatar rounded size='medium' source={require('../assets/images/luau.jpg')} />
                             Traditions
                         </Text>
                     </Card>
@@ -103,27 +103,28 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         textAlign: 'center',
         alignItems: 'center',
-        // flex: 1,
     },
     tile: {
-        minHeight: 100,
+        minHeight: 90,
         backgroundColor: '#B8E7CA',
         borderColor: '#07607B',
         borderRadius: 10,
         borderWidth: 5,
         display: 'flex',
         flexDirection: 'row',
-        flexWrap: 'wrap',
+        justifyContent: 'space-between',
         alignItems: 'center',
-        justifyContent: 'space-around',
+        flexWrap: 'wrap',
     },
     subtitle: {
-        fontSize: 26,
+        fontSize: 24,
         fontWeight: 'bold',
-        textAlign: 'left',
+        flex: 1,
     },
-    thumbnail: {
-        alignItems: 'center',
+    thumb: {
+        flex: 1,
+        width: 60,
+        height: 60,
     }
 
 });
