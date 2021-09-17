@@ -1,8 +1,8 @@
 //by Zach
 //WIP I still need to add responsive icons and need to add the onPress with links going to our seperate pages
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, ScrollView } from 'react-native';
-import { Icon } from 'react-native-elements';
+import { View, Text, StyleSheet, ScrollView, Linking } from 'react-native';
+import { Icon, Avatar } from 'react-native-elements';
 
 //This component is to be like our React footer component plus I thought it would be nice to add about us, the developers and a bit about the project too.
 
@@ -12,7 +12,16 @@ class About extends Component {
 
     static navigationOptions = {
         title: 'About Us & This App',
-        tabBarVisible: false
+        tabBarVisible: false,
+        headerStyle :{
+            backgroundColor: '#07607B',
+            height: 90,
+            paddingTop: 45
+        },
+        headerTintColor: '#fff',
+        headerTitleStyle: {
+            color: '#fff'
+        }
     }
 
     render() {
@@ -23,32 +32,31 @@ class About extends Component {
                     Links To The Bros!
                 </Text>
                 <View style={styles.iconDiv}>
-                    <Icon
-                        name='smile-o'
-                        type='font-awesome'
-                        color='#acb84e'
-                        raised
-                        reverse
+                <Avatar
+                        source={require('../assets/images/mark.jpg')}
+                        rounded
+                        size="large"
+                        onPress={() => this.props.navigation.navigate('Mark')} 
                     />
                     <Text style={styles.name}>Mark</Text>
                 </View>
                 <View style={styles.iconDiv}>
-                    <Icon
-                        name='smile-o'
-                        type='font-awesome'
-                        color='#b84eac'
-                        raised
-                        reverse
+                <Avatar
+                        //source={require('../assets/images/mark.jpg')}
+                        title="FA"
+                        rounded
+                        size="large"
+                        onPress={() => this.props.navigation.navigate('Fredo')} 
                     />
                     <Text style={styles.name}>Fredo</Text>
                 </View>
                 <View style={styles.iconDiv}>
-                    <Icon
-                        name='meh-o'
-                        type='font-awesome'
-                        color='#b85a4e'
-                        raised
-                        reverse
+                <Avatar
+                        //source={require('../assets/images/mark.jpg')}
+                        title="ZF"
+                        rounded
+                        size="large"
+                        onPress={() => this.props.navigation.navigate('Zach')} 
                     />
                     <Text style={styles.name}>Zach</Text>
                 </View>
@@ -57,6 +65,7 @@ class About extends Component {
                         name="github"
                         type="font-awesome"
                         color="#24292F"
+                        onPress={() => { Linking.openURL('https://github.com/mj-wd/oahu-project-react-native')}}
                         reverse
                     />
                     <Text style={styles.name}>Github</Text>

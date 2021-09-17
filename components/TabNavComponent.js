@@ -7,9 +7,10 @@ import { createAppContainer } from 'react-navigation';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 
 import Home from './HomeComponent';
-import About from './AboutComponent';
 import Map from './MapComponent';
 import Attractions from './AttractionsComponent';
+import { Icon } from 'react-native-elements';
+import Dudes from './DudesComponent';
 
 const HomeNavigator = createBottomTabNavigator(
     {
@@ -32,17 +33,67 @@ const MapNavigator = createBottomTabNavigator(
 
 const AboutNavigator = createBottomTabNavigator(
     {
-        About: { screen: About }
+        About: { screen: Dudes }
     },
 );
 
 const TabNavNavigator = createBottomTabNavigator(
     {
-        Home: { screen: HomeNavigator },
-        Attractions: { screen: AttractionsNavigator },
-        Map: { screen: MapNavigator },
-        About: { screen: AboutNavigator }
+        Home: { screen: HomeNavigator,
+            navigationOptions:{
+                tabBarIcon: ({ tintColor }) => (  
+                    <View>  
+                        <Icon 
+                        name='home'
+                        type='font-awesome'
+                        color= {tintColor}
+                        />  
+                    </View>)  
+            }
+        },
+        Attractions: { screen: AttractionsNavigator,
+            navigationOptions:{
+                tabBarIcon: ({ tintColor }) => (  
+                    <View>  
+                        <Icon 
+                        name='bullhorn'
+                        type='font-awesome'
+                        color= {tintColor}
+                        />  
+                    </View>)  
+            } },
+        Map: { screen: MapNavigator,
+            navigationOptions:{
+                tabBarIcon: ({ tintColor }) => (  
+                    <View>  
+                        <Icon 
+                        name='map-o'
+                        type='font-awesome'
+                        color= {tintColor}
+                        />  
+                    </View>)  
+            } },
+        About: { screen: AboutNavigator,
+            navigationOptions:{
+                tabBarIcon: ({ tintColor }) => (  
+                    <View>  
+                        <Icon 
+                        name='user-o'
+                        type='font-awesome'
+                        color= {tintColor}
+                        />  
+                    </View>)  
+            } }
     },
+    {
+        tabBarOptions: {
+            activeBackgroundColor: '#07607B',
+            inactiveBackgroundColor: '#F6F1D2',
+            activeTintColor: '#fff',
+            inactiveTintColor: '#d24375',
+            labelStyle: {fontSize:15, color: 'black', fontWeight: 'bold'},
+        }
+    }
 );
 
 const TabNavigator = createAppContainer(TabNavNavigator)
