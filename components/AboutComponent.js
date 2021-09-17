@@ -42,7 +42,7 @@ class About extends Component {
                 </View>
                 <View style={styles.iconDiv}>
                 <Avatar
-                        //source={require('../assets/images/mark.jpg')}
+                        source={require('../assets/images/fredo.jpeg')}
                         title="FA"
                         rounded
                         size="large"
@@ -105,7 +105,7 @@ class About extends Component {
                         <Icon
                             name="copyright"
                             type="font-awesome"
-                            color="red"
+                            color="black"
                             size={20}
                             style={styles.icon1}
                         />
@@ -117,7 +117,7 @@ class About extends Component {
                         <Icon
                             name="copyright"
                             type="font-awesome"
-                            color="red"
+                            color="black"
                             style={styles.icon2}
                         />
                         <Text style={styles.text2}>

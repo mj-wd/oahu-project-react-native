@@ -43,13 +43,13 @@ const styles = StyleSheet.create ({
         backgroundColor: "#4EACB8"
       },
     image: {
-        width: 400,
-        height: 400,
+        width: 350,
+        height: 350,
     },
     bio: {
         fontSize: 16,
         fontWeight: "bold",
-        textAlign: 'center'
+        textAlign: 'left'
     }
 })
 export default Zach;
