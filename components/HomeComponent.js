@@ -2,17 +2,19 @@
 //Work in progress with the styling
 import React, { Component } from 'react';
 import { View, Text, Image, StyleSheet } from 'react-native';
+import { Icon } from 'react-native-elements';
 
 class Home extends Component {
 
     static navigationOptions = {
         title: 'Home',
-        tabBarVisible: false
+        tabBarVisible: false}
+        
         //tabBarVisible gets rid of the extra tab on top saying which tab we are currently in.
         //Just a design idea.
         //Awesome! Great idea. Can you please implement this on all the pages since you own the tabBar? - MJ 09/10/21
         //Also, I changed all the .styles to CamelCase, and all image filenames and location, to be consistent with the rest of the App. - MJ 09/10/21
-    }
+    
 
     render() {
         return (
