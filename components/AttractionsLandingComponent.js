@@ -1,9 +1,10 @@
 //by Fredo
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, ImageBackground, TouchableHighlight } from 'react-native';
-import { Card,  } from 'react-native-elements';
+import { Card, Avatar } from 'react-native-elements';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Assets } from 'react-navigation-stack';
+import Beaches from './BeachesComponent';
 
 class AttractionsLanding extends Component {
     
@@ -33,7 +34,8 @@ class AttractionsLanding extends Component {
                     underlayColor
                 >
                     <Card containerStyle={styles.tile}>
-                        <Text>
+                        <Text style={styles.subtitle}>
+                        <Avatar rounded size='medium' source={require('../assets/images/beach.jpg')} />
                             Beaches
                         </Text>
                     </Card>
@@ -44,7 +46,8 @@ class AttractionsLanding extends Component {
                     underlayColor
                 >
                     <Card containerStyle={styles.tile}>
-                        <Text>
+                        <Text style={styles.subtitle}>
+                        <Avatar rounded size='medium' source={require('../assets/images/ricados.jpg')} />
                             Restaurants
                         </Text>
                     </Card>
@@ -55,7 +58,8 @@ class AttractionsLanding extends Component {
                     underlayColor
                 >
                     <Card containerStyle={styles.tile}>
-                        <Text>
+                        <Text style={styles.subtitle}>
+                        <Avatar rounded size='medium' source={require('../assets/images/alamoana.jpg')} />
                             Shopping
                         </Text>
                     </Card>
@@ -66,7 +70,8 @@ class AttractionsLanding extends Component {
                     underlayColor
                 >
                     <Card containerStyle={styles.tile}>
-                        <Text>
+                        <Text style={styles.subtitle}>
+                        <Avatar rounded size='medium' source={require('../assets/images/pearl-harbor.jpg')} />
                             Sightseeing
                         </Text>
                     </Card>
@@ -77,7 +82,8 @@ class AttractionsLanding extends Component {
                     underlayColor
                 >
                     <Card containerStyle={styles.tile}>
-                        <Text>
+                        <Text style={styles.subtitle}>
+                        <Avatar rounded size='medium' source={require('../assets/images/luau.jpg')} />
                             Traditions
                         </Text>
                     </Card>
@@ -100,22 +106,23 @@ const styles = StyleSheet.create({
         textAlign: 'center'
     },
     subtitle: {
-        fontSize: 20,
+        fontSize: 26,
         fontWeight: 'bold',
+        textAlign: 'left',
+        paddingVertical: 'auto'
     },
     tile: {
-        height: 100,
-        backgroundColor: '#fff',
-        borderColor: '#B8E7CA',
+        minHeight: 100,
+        backgroundColor: '#B8E7CA',
+        borderColor: '#07607B',
         borderRadius: 10,
         borderWidth: 5,
-        padding: 0,
-        margin: 10,
+        paddingHorizontal: 10,
+        margin: 15,
         display: 'flex',
         flexDirection: 'row',
-        flexWrap: 'wrap',
-        alignItems: 'center',
-        justifyContent: 'center',
+        flexWrap: 'nowrap',
+        alignContent: 'center'
     },
 
 });
