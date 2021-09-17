@@ -1,6 +1,6 @@
 //by Fredo
 import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, ImageBackground } from 'react-native';
 import { Card, Button } from 'react-native-elements';
 import { LinearGradient } from 'expo-linear-gradient';
 
@@ -27,10 +27,8 @@ class AttractionsLanding extends Component {
                     Featured Attractions
                 </Text>
                 <Card containerStyle={styles.tile}>
-                    <Text style={styles.subtitle}>
-                        Beaches
-                    </Text>
-                    <Button title="Go"
+                    <Button 
+                        title="Beaches"
                         raised={true}
                         onPress={() => this.props.navigation.navigate('Beaches')}
                         ViewComponent={LinearGradient}
@@ -38,10 +36,7 @@ class AttractionsLanding extends Component {
                     />
                 </Card>
                 <Card containerStyle={styles.tile}>
-                    <Text style={styles.subtitle}>
-                        Restaurants
-                    </Text>
-                    <Button title="Go"
+                    <Button title="Restaurants"
                         raised={true}
                         onPress={() => this.props.navigation.navigate('Restaurants')}
                         ViewComponent={LinearGradient}
@@ -49,10 +44,7 @@ class AttractionsLanding extends Component {
                     />
                 </Card>
                 <Card containerStyle={styles.tile}>
-                    <Text style={styles.subtitle}>
-                        Shopping
-                    </Text>
-                    <Button title="Go"
+                    <Button title="Shopping"
                         raised={true}
                         onPress={() => this.props.navigation.navigate('Shopping')}
                         ViewComponent={LinearGradient}
@@ -60,10 +52,7 @@ class AttractionsLanding extends Component {
                     />
                 </Card>
                 <Card containerStyle={styles.tile}>
-                    <Text style={styles.subtitle}>
-                        Sightseeing
-                    </Text>
-                    <Button title="Go"
+                    <Button title="Sightseeing"
                         raised={true}
                         onPress={() => this.props.navigation.navigate('Sightseeing')}
                         ViewComponent={LinearGradient}
@@ -71,10 +60,7 @@ class AttractionsLanding extends Component {
                     />
                 </Card>
                 <Card containerStyle={styles.tile}>
-                    <Text style={styles.subtitle}>
-                        Traditions
-                    </Text>
-                    <Button title="Go"
+                    <Button title="Traditions"
                         raised={true}
                         onPress={() => this.props.navigation.navigate('Traditions')}
                         ViewComponent={LinearGradient}
@@ -105,13 +91,16 @@ const styles = StyleSheet.create({
     tile: {
         height: 100,
         backgroundColor: '#fff',
-        borderColor: '#ededed',
-        borderRadius: 5,
-        borderWidth: 1,
-        padding: 20,
+        borderColor: '#B8E7CA',
+        borderRadius: 10,
+        borderWidth: 5,
+        padding: 0,
+        margin: 10,
         display: 'flex',
         flexDirection: 'row',
         flexWrap: 'wrap',
+        alignItems: 'center',
+        justifyContent: 'center',
     },
 
 });
