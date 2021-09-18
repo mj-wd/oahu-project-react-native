@@ -1,14 +1,12 @@
 //by Fredo
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, ImageBackground, TouchableHighlight } from 'react-native';
-import { Card, Avatar } from 'react-native-elements';
-// import { LinearGradient } from 'expo-linear-gradient';
+import { View, Text, StyleSheet, Image, Pressable } from 'react-native';
 
 class AttractionsLanding extends Component {
-    
+
     static navigationOptions = {
         title: 'The Best of Oahu',
-        // tabBarVisible: false,
+        tabBarVisible: false,
         headerStyle :{
             backgroundColor: '#07607B',
             height: 90,
@@ -26,66 +24,36 @@ class AttractionsLanding extends Component {
                 <Text style={styles.title}>
                     Featured Attractions
                 </Text>
-                <TouchableHighlight
-                    onPress={() => this.props.navigation.navigate('Beaches')}
-                    activeOpacity='0'
-                    underlayColor
-                >
-                    <Card containerStyle={styles.tile}>
-                        <Text style={styles.subtitle}>
-                        <Avatar rounded style={styles.thumb} size='medium' source={require('../assets/images/beach.jpg')} />
-                            Beaches
-                        </Text>
-                    </Card>
-                </TouchableHighlight>
-                <TouchableHighlight
-                    onPress={() => this.props.navigation.navigate('Restaurants')}
-                    activeOpacity='0'
-                    underlayColor
-                >
-                    <Card containerStyle={styles.tile}>
-                        <Text style={styles.subtitle}>
-                        <Avatar rounded  size='medium' source={require('../assets/images/ricados.jpg')} />
-                            Restaurants
-                        </Text>
-                    </Card>
-                </TouchableHighlight>
-                <TouchableHighlight
-                    onPress={() => this.props.navigation.navigate('Shopping')}
-                    activeOpacity='0'
-                    underlayColor
-                >
-                    <Card containerStyle={styles.tile}>
-                        <Text style={styles.subtitle}>
-                        <Avatar rounded size='medium' source={require('../assets/images/alamoana.jpg')} />
-                            Shopping
-                        </Text>
-                    </Card>
-                </TouchableHighlight>
-                <TouchableHighlight
-                    onPress={() => this.props.navigation.navigate('Sightseeing')}
-                    activeOpacity='0'
-                    underlayColor
-                >
-                    <Card containerStyle={styles.tile}>
-                        <Text style={styles.subtitle}>
-                        <Avatar rounded size='medium' source={require('../assets/images/pearl-harbor.jpg')} />
-                            Sightseeing
-                        </Text>
-                    </Card>
-                </TouchableHighlight>
-                <TouchableHighlight
-                    onPress={() => this.props.navigation.navigate('Traditions')}
-                    activeOpacity='0'
-                    underlayColor
-                >
-                    <Card containerStyle={styles.tile}>
-                        <Text style={styles.subtitle}>
-                        <Avatar rounded size='medium' source={require('../assets/images/luau.jpg')} />
-                            Traditions
-                        </Text>
-                    </Card>
-                </TouchableHighlight>
+                <Pressable style={styles.touchContainer} onPress={() => this.props.navigation.navigate('Beaches')}>
+                    <Image source={require('../assets/images/beach.jpg')} style={styles.thumb} />
+                    <Text style={styles.subtitle}>
+                        Beaches
+                    </Text>
+                </Pressable>
+                <Pressable style={styles.touchContainer} onPress={() => this.props.navigation.navigate('Restaurants')}>
+                    <Image source={require('../assets/images/ricados.jpg')} style={styles.thumb} />
+                    <Text style={styles.subtitle}>
+                        Restaurants
+                    </Text>
+                </Pressable>
+                <Pressable style={styles.touchContainer} onPress={() => this.props.navigation.navigate('Shopping')}>
+                    <Image source={require('../assets/images/alamoana.jpg')} style={styles.thumb} />
+                    <Text style={styles.subtitle}>
+                        Shopping
+                    </Text>
+                </Pressable>
+                <Pressable style={styles.touchContainer} onPress={() => this.props.navigation.navigate('Sightseeing')}>
+                    <Image source={require('../assets/images/pearl-harbor.jpg')} style={styles.thumb} />
+                    <Text style={styles.subtitle}>
+                        Sightseeing
+                    </Text>
+                </Pressable>
+                <Pressable style={styles.touchContainer} onPress={() => this.props.navigation.navigate('Traditions')}>
+                    <Image source={require('../assets/images/luau.jpg')} style={styles.thumb} />
+                    <Text style={styles.subtitle}>
+                        Traditions
+                    </Text>
+                </Pressable>
             </View>
         );
     }
@@ -104,27 +72,32 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         alignItems: 'center',
     },
-    tile: {
-        minHeight: 90,
-        backgroundColor: '#B8E7CA',
-        borderColor: '#07607B',
-        borderRadius: 10,
-        borderWidth: 5,
-        display: 'flex',
+    touchContainer: {
+        flex: 1,
+        alignItems:'center',
+        marginVertical: 5,
+        marginHorizontal: 10,
         flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        flexWrap: 'wrap',
+        alignItems: 'flex-start',
+        backgroundColor: '#07607B',
+        borderColor: '#07607B',
+        borderRadius: 15,
     },
     subtitle: {
         fontSize: 24,
         fontWeight: 'bold',
-        flex: 1,
+        color: '#ffffff',
+        marginLeft: 16,
+        alignSelf: 'center',
     },
     thumb: {
-        flex: 1,
-        width: 60,
-        height: 60,
+        width: 180,
+        height: 90,
+        borderRadius: 10,
+        borderWidth: 1,
+        borderColor: '#F6F1D2',
+        marginLeft: 24,
+        alignSelf: 'center',
     }
 
 });
