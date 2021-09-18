@@ -39,13 +39,6 @@ class Fredo extends Component {
                     reverse
                 />
                 <Icon
-                    name="twitter"
-                    type="font-awesome"
-                    color="#08a0e9"
-                    onPress={() => { Linking.openURL('https://twitter.com/fredodotdesign')}}
-                    reverse
-                />
-                <Icon
                     name="github"
                     type="font-awesome"
                     color="#333"
@@ -62,8 +55,15 @@ class Fredo extends Component {
                 <Icon
                     name="mouse-pointer"
                     type="font-awesome"
-                    color="#E62117"
+                    color="orange"
                     onPress={() => { Linking.openURL('https://fredo.design')}}
+                    reverse
+                />
+                <Icon
+                    name="bicycle"
+                    type="font-awesome"
+                    color="navy"
+                    onPress={() => { Linking.openURL('http://tofighthiv.org/goto/fredo22')}}
                     reverse
                 />
             </View>
