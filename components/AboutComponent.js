@@ -52,7 +52,7 @@ class About extends Component {
                 </View>
                 <View style={styles.iconDiv}>
                 <Avatar
-                        //source={require('../assets/images/mark.jpg')}
+                        source={require('../assets/images/zach.jpg')}
                         title="ZF"
                         rounded
                         size="large"
@@ -75,24 +75,28 @@ class About extends Component {
                         name="instagram"
                         type="font-awesome"
                         color="#8134AF"
+                        onPress={() => { Linking.openURL('')}}
                         reverse
                     />
                     <Icon
                         name="facebook"
                         type="font-awesome"
                         color="#3B5998"
+                        onPress={() => { Linking.openURL('https://www.facebook.com/Hawaii/')}}
                         reverse
                     />
                     <Icon
                         name="twitter"
                         type="font-awesome"
                         color="#08a0e9"
+                        onPress={() => { Linking.openURL('https://twitter.com/gohawaii?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor')}}
                         reverse
                     />
                     <Icon
                         name="youtube"
                         type="font-awesome"
                         color="#E62117"
+                        onPress={() => { Linking.openURL('https://www.youtube.com/channel/UCUzuwLc274MFs5SXEbwDrsQ')}}
                         reverse
                     />
                     <Icon

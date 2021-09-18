@@ -26,8 +26,8 @@ class Zach extends Component {
         <ScrollView style={styles.container}>
             <TouchableOpacity>
 
-            <Image source={require('../assets/images/hero-image-oahu.jpg')} style={styles.image} />
-            <Text style={styles.bio}>Insert Zach Bio</Text>
+            <Image source={require('../assets/images/zach.jpg')} style={styles.image} />
+            <Text style={styles.bio}>Born and raised in Honolulu, Hawaii, Zach has spent his whole 20 years of existence on an island. When he's not coding, Zach likes to play video games, go on hikes with his girlfriend Sakura, and binge watch anime with Sakura. Zach has worked in retail in the past but is now looking for remote web development oppurtunities.</Text>
 
 
             </TouchableOpacity>
